@@ -1,0 +1,172 @@
+{
+    "family": "",
+    "taskRoleArn": "",
+    "executionRoleArn": "arn:aws:iam::196280778687:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "containerDefinitions": [
+        {
+            "name": "node_server",
+            "image": "public.ecr.aws/o0c1g4l0/my_repo:app",
+            "repositoryCredentials": {
+                "credentialsParameter": ""
+            },
+            "portMappings": [
+                {
+                    "containerPort": 4000,
+                    "hostPort": 4000,
+                    "protocol": "tcp"
+                }
+            ],
+            "environment": [
+                {
+                    "name": "",
+                    "value": ""
+                }
+            ],
+            "dependsOn": [
+                {
+                    "containerName": "",
+                    "condition": "START"
+                }
+            ],
+            "startTimeout": 0,
+            "stopTimeout": 0,
+            "hostname": "",
+            "user": "",
+            "workingDirectory": "",
+            "disableNetworking": true,
+            "privileged": true,
+            "readonlyRootFilesystem": true,
+            "dnsServers": [
+                ""
+            ],
+            "dnsSearchDomains": [
+                ""
+            ],
+            "extraHosts": [
+                {
+                    "hostname": "",
+                    "ipAddress": ""
+                }
+            ],
+            "dockerSecurityOptions": [
+                ""
+            ],
+            "interactive": true,
+            "pseudoTerminal": true,
+            "dockerLabels": {
+                "KeyName": ""
+            },
+            "ulimits": [
+                {
+                    "name": "memlock",
+                    "softLimit": 0,
+                    "hardLimit": 0
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "splunk",
+                "options": {
+                    "KeyName": ""
+                },
+                "secretOptions": [
+                    {
+                        "name": "",
+                        "valueFrom": ""
+                    }
+                ]
+            },
+            "healthCheck": {
+                "command": [
+                    ""
+                ],
+                "interval": 0,
+                "timeout": 0,
+                "retries": 0,
+                "startPeriod": 0
+            },
+            "systemControls": [
+                {
+                    "namespace": "",
+                    "value": ""
+                }
+            ],
+            "resourceRequirements": [
+                {
+                    "value": "",
+                    "type": "InferenceAccelerator"
+                }
+            ],
+            "firelensConfiguration": {
+                "type": "fluentbit",
+                "options": {
+                    "KeyName": ""
+                }
+            }
+        }
+    ],
+    "volumes": [
+        {
+            "name": "",
+            "host": {
+                "sourcePath": ""
+            },
+            "dockerVolumeConfiguration": {
+                "scope": "shared",
+                "autoprovision": true,
+                "driver": "",
+                "driverOpts": {
+                    "KeyName": ""
+                },
+                "labels": {
+                    "KeyName": ""
+                }
+            },
+            "efsVolumeConfiguration": {
+                "fileSystemId": "",
+                "rootDirectory": "",
+                "transitEncryption": "DISABLED",
+                "transitEncryptionPort": 0,
+                "authorizationConfig": {
+                    "accessPointId": "",
+                    "iam": "DISABLED"
+                }
+            }
+        }
+    ],
+    "placementConstraints": [
+        {
+            "type": "memberOf",
+            "expression": ""
+        }
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "",
+    "memory": "",
+    "tags": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "pidMode": "host",
+    "ipcMode": "none",
+    "proxyConfiguration": {
+        "type": "APPMESH",
+        "containerName": "",
+        "properties": [
+            {
+                "name": "",
+                "value": ""
+            }
+        ]
+    },
+    "inferenceAccelerators": [
+        {
+            "deviceName": "",
+            "deviceType": ""
+        }
+    ]
+}
